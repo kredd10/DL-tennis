@@ -5,7 +5,9 @@ def main():
 
     video_frames = read_video(input_video_path)
 
-    save_video(video_frames, 'output_videos/output_video.avi')
+    save_video(video_frames, "output_videos/output_video.avi")
+    
+    
     print("Hello, World!")
 
 if __name__ == '__main__':

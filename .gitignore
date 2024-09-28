@@ -20,3 +20,4 @@ input_videos/
 runs/
 training/
 yolov8x.pt
+output_videos/
