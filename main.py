@@ -11,14 +11,18 @@ def main():
 
 
     #detecting the players
-    player_tracker = PlayerTracker(model_path='yolov8x')
+    player_tracker = PlayerTracker(model_path="yolov8x")
 
-    player_detections = player_tracker.detect_frame(video_frames)
+    player_detections = player_tracker.detect_frames(video_frames)
+
+    #draw output
+
+    
+    #Draw the bounding boxes
+    output_video_frames=player_tracker.draw_bboxes(video_frames, player_detections)
 
     save_video(video_frames, "output_videos/output_video.avi")
     
-    
-    print("Hello, World!")
 
-if __name__ == '__main__':
-        main()
+if __name__ == "__main__":
+    main()

@@ -2,8 +2,8 @@ from ultralytics import YOLO
 import cv2
 
 class PlayerTracker:
-    def __init__(self):
-        self.model = YOLO('models/yolov8x') # for tracking
+    def __init__(self,model_path):
+        self.model = YOLO(model_path) # for tracking
 
     def detect_frames(self, frames):
         player_detections = []
